@@ -74,12 +74,73 @@ main .infoText{
     font: 1.25rem/3.5rem "Playfair Display", serif;
 }
 
+main .navBox{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #231815;
+}
+main .navBox .singleBox{
+    min-height: 250px;
+    width: 25%;    
+}
+main .navBox .singleBox a{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: #fff;
+    font: 1rem/1.1rem 'Noto Sans', sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease;
+}
+main .navBox .singleBox a span{
+    padding: 45px;
+    transition: background-color 0.5s ease;
+}
+main .navBox .singleBox a:hover{
+    background-color: initial;
+    color: #000;
+}
+main .navBox .singleBox a:hover span{
+    background-color: rgba(255, 255, 255, .8);
+}
+/** trafficAccess, shrineHistory, fourDieties, majorFestivals, majorCeremonies, shrineEtiquette **/
+main .navBox #trafficAccess{
+    background: url('../img/bg1.jpg') center/cover no-repeat;
+}
+main .navBox #shrineHistory{
+    background: url('../img/bg2.jpg') center/cover no-repeat;
+}
+main .navBox #fourDieties{
+    background: url('../img/bg3.jpg') center/cover no-repeat;
+}
+main .navBox #majorFestivals{
+    background: url('../img/bg4.jpg') center/cover no-repeat;
+}
+main .navBox #majorCeremonies{
+    background: url('../img/bg5.jpg') center/cover no-repeat;
+}
+main .navBox #shrineEtiquette{
+    background: url('../img/bg6.jpg') center/cover no-repeat;
+}
+
+main .mapBox{
+    padding: 20px 0;
+}
 main .mapBox iframe{
     display: block;
     width: 100%;
     max-width: 450px;
     margin: 0 auto;
 }
+
 
 footer{
     padding: 15px 0;
@@ -96,8 +157,19 @@ footer em{
 }
 
 /** Responsive **/
-/* @media only screen and (max-width: 403px) {
-    header .theLogo img{
-        width: 100%;
+@media only screen and (max-width: 1200px) {
+    main .navBox .singleBox{
+        width: 33.3333%;    
     }
-} */
+}
+@media (max-width: 575.98px) {
+    main .navBox .singleBox{
+        width: 50%;   
+    }
+}
+@media (max-width: 414.98px) {
+    main .navBox .singleBox{
+        min-height: auto;
+        width: 100%;   
+    }
+}
